@@ -1,4 +1,4 @@
-# cpsc747-project1
+# cpsc474-project1
 ## Lamport's Logical Clocks 
 Conceptual Implementation of Lamport's Logical Clocks using string matrices.
 
