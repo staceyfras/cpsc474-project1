@@ -54,7 +54,7 @@ testinput = fileReader(userInput)
 p1 = process(testinput[0])
 p2 = process(testinput[1])
 p3 = process(testinput[2])
-while p1.input[0] != None :#and  p2.input[0] != None and p3.input[0] != None:
+while p1.input[0] != None or p2.input[0] != None or p3.input[0] != None:
     #internal section
     if p1.input[0] == 'i' :
         p1.internal()
