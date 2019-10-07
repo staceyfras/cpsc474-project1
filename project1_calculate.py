@@ -10,6 +10,10 @@ def fileReader(filename):
         for j in range(0, len(testinput[i])):
             if len(testinput[i][j]) == 1:
                 testinput[i][j] = 'i'
+    maxlen = max(len(testinput[0]), len(testinput[1]), len(testinput[2]))
+    for i in range(0, len(testinput)):
+        if len(testinput[i]) != maxlen:
+            testinput[i].append("NULL")
 
     return testinput
 
