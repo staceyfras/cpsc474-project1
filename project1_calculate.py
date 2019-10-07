@@ -1,16 +1,21 @@
-#Reads file and cleans input to make other parts simpler
+# Reads file and cleans input to make other parts simpler
 def fileReader(filename):
     testinput = list()
     with open(filename) as f:
         testinput = f.read().splitlines()
-
+    # fill lists with events
     for i in range(0, len(testinput)):
         testinput[i] = testinput[i].split()
     for i in range(0, len(testinput)):
         for j in range(0, len(testinput[i])):
             if len(testinput[i][j]) == 1:
                 testinput[i][j] = 'i'
-    maxlen = max(len(testinput[0]), len(testinput[1]), len(testinput[2]))
+    # sets max length of row
+    maxlen = len(testinput[0])
+    for i in range(0, len(testinput)):
+        if len(testinput[i])>maxlen:
+            maxlen = len(testinput[i])
+    # fills empty spots with null
     for i in range(0, len(testinput)):
         if len(testinput[i]) != maxlen:
             testinput[i].append("NULL")
