@@ -59,7 +59,6 @@ class process:
 userInput = input("Enter file path for test case:  ")
 testinput = fileReader(userInput)
 send = [0]*9
-print(send)
 num = len(testinput)
 if num == 1:
     p1 = process(testinput[0])
