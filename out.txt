@@ -1,0 +1,29 @@
+[1, 2, 8, 9]
+
+
+[1, 6, 7, 0]
+
+
+[3, 4, 5, 6]
+
+
+
+
+
+
+Result of Calculate Algo: 
+
+[1, 2, 8, 9]
+[1, 6, 7, 0]
+[3, 4, 5, 6]
+
+
+Result of Calculate Algo: 
+
+[1, 2, 8, 9]
+[1, 6, 7, 0]
+[3, 4, 5, 6]
+
+
+Result of Verify Algo: OUTPUT IS INCORRECT
+

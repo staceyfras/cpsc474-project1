@@ -60,8 +60,9 @@ class process:
         self.input.append(None)
     def result(self):
         if self.output[0] != None:
-            print(self.output)
-
+            fi = open("out.txt", "a")            
+            print(self.output, file=fi)
+            fi.close()
 
 #main
 def main():
@@ -372,12 +373,21 @@ def main():
         if p5.input[0] == 'NULL':
             p5.null()
 
-# print results
+    # print results
+    fi = open("out.txt", "a")
+    print("Result of Calculate Algo: \n", file=fi)
+    fi.close()
+
     p1.result()
     p2.result()
     p3.result()
     p4.result()
     p5.result()
+    # add an endline for clarity if usage of file is continued
+    fi = open("out.txt", "a")
+    print("\n", file=fi)
+    fi.close()
+
 
 if __name__ == "__main__":
     main()

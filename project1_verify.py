@@ -12,7 +12,6 @@ def fileReader(filename):
 
 def main():
     userInput = input("Enter file path for test case:  ")
-    #inp = [[1, 2, 8, 9], [1, 6, 7, 0], [3, 4, 5, 6]] 
     inp = fileReader(userInput)
     n = len(inp)
     m = len(inp[0])
@@ -38,7 +37,6 @@ def main():
                 rloc[inp[i][j]] = [i, j]
                 # first event is not 1 and the even following it is also a receive event
                 if j+1 < len(inp[i]) and inp[i][j+1] > inp[i][j] + 1:
-                    print(inp[i][j+1])
                     receive.append(inp[i][j+1])
                     s_value = inp[i][j+1] - 1
                     send.append(s_value)
@@ -64,6 +62,9 @@ def main():
                         find = True
                         break
             if find == False:	# send value d.n.e
+                fi = open("out.txt", "a")
+                print("Result of Verify Algo: OUTPUT IS INCORRECT\n", file=fi)
+                fi.close()
                 sys.exit('OUTPUT IS INCORRECT')
     # sort the values (increasing) and update output with send/receive events
     send.sort()
@@ -84,9 +85,12 @@ def main():
         r_count += 1
     
     # print the result
+    fi = open("out.txt", "a")
+    print("Result of Verify Algo: \n", file=fi)
     for i in range(0, len(out)):
-        print(out[i])
+        print(out[i], file=fi)
+    print("\n", file=fi)
+    fi.close()
     
-
 if __name__ == "__main__":
     main()
