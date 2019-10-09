@@ -1,13 +1,16 @@
+# Project 1: Verify Algorithm
+# Stacey Frasier, Nino Vilagi
+#
 import sys
 # Reads file and cleans input to make other parts simpler
-# Modified from project1_calculate verify algo
+# Modified from project1_calculate.py
 def fileReader(filename):
     testinput = list()
     with open(filename) as f:
         testinput = f.read().splitlines() # split the line
     for i in range(0, len(testinput)):
         testinput[i] = list(map(int, testinput[i].split())) # split the string
-
+    
     return testinput
 
 def main():
@@ -86,7 +89,6 @@ def main():
     fi = open(outFile, "a")
     for i in range(0, len(out)):
         print(*out[i], file=fi)
-    print("\n", file=fi)
     fi.close()
     
 if __name__ == "__main__":

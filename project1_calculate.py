@@ -1,4 +1,7 @@
 # Reads file and cleans input to make other parts simpler
+# Project 1: Calculate Algorithm
+# Stacey Frasier, Nino Vilagi
+#
 def fileReader(filename):
     testinput = list()
     with open(filename) as f:
@@ -393,7 +396,6 @@ def main():
     p5.result(userOutput)
     # add an endline for clarity if usage of file is continued
     fi = open(userOutput, "a")
-    print("\n", file=fi)
     fi.close()
 
 
