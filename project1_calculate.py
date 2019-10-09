@@ -65,7 +65,7 @@ class process:
     def result(self, file):
         if self.output[0] != None:
             fi = open(file, "a")
-            print(self.output, file=fi)
+            print(*self.output, file=fi)
             fi.close()
 
 
