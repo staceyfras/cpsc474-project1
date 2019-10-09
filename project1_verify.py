@@ -11,8 +11,8 @@ def fileReader(filename):
     return testinput
 
 def main():
-    userInput = input("Enter file path for test case:  ")
-    inp = fileReader(userInput)
+    inFile = input("Enter file path for test case:  ")
+    inp = fileReader(inFile)
     n = len(inp)
     m = len(inp[0])
     # initiate output to all internal events
@@ -62,10 +62,7 @@ def main():
                         find = True
                         break
             if find == False:	# send value d.n.e
-                fi = open("out.txt", "a")
-                print("Result of Verify Algo: OUTPUT IS INCORRECT\n", file=fi)
-                fi.close()
-                sys.exit('OUTPUT IS INCORRECT')
+                sys.exit('OUTPUT IS INCORRECT. Therefore, output was not written to file.')
     # sort the values (increasing) and update output with send/receive events
     send.sort()
     receive.sort()
@@ -85,10 +82,10 @@ def main():
         r_count += 1
     
     # print the result
-    fi = open("out.txt", "a")
-    print("Result of Verify Algo: \n", file=fi)
+    outFile = input("Enter name for output file with '.txt' at the end:  ")
+    fi = open(outFile, "a")
     for i in range(0, len(out)):
-        print(out[i], file=fi)
+        print(*out[i], file=fi)
     print("\n", file=fi)
     fi.close()
     
